@@ -24,7 +24,7 @@ pip install librosa, unidecode, inflect
 The procedure for speech2unit is the same as the gslm example in [fairseq](https://github.com/facebookresearch/fairseq/tree/main/examples/textless_nlp/gslm/speech2unit). 
 
 
-You can convert the Japanese voice signal to discrete unit through this [pre-trained quantization model](). Route the downloaded model to ```KM_MODEL_PATH```. 
+You can convert the Japanese voice signal to discrete unit through this [pre-trained quantization model](https://github.com/nonmetal/gslm-japanese/raw/main/hubert200_JPN.bin). Route the downloaded model to ```KM_MODEL_PATH```. 
 
 
 This file replaces the ```HuBERT Base + KM200``` model provided by fariseq, so it is required to download ```HuBERT-Base``` model as a pretrained acoustic model.
@@ -50,7 +50,7 @@ python examples/textless_nlp/gslm/speech2unit/clustering/quantize_with_kmeans.py
 ### unit2speech
 
 unit2speech model is modified Tacotron2 model that learns to synthesize speech from discrete speech units. 
-You can convert the discrete unit to synthesized voice through this [model](). Also, it is required to download [Waveglow checkpoint](https://dl.fbaipublicfiles.com/textless_nlp/gslm/waveglow_256channels_new.pt) for Vocoder. 
+You can convert the discrete unit to synthesized voice through this [model](https://huggingface.co/nonmetal/gslm-japanese/resolve/main/checkpoint_125k.pt). Also, it is required to download [Waveglow checkpoint](https://dl.fbaipublicfiles.com/textless_nlp/gslm/waveglow_256channels_new.pt) for Vocoder. 
 
 
 Conversion from unit to speech is available with ```unit2speech_ja.py``` from this repository.
